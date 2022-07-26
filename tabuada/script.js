@@ -1,19 +1,17 @@
-function contar() {
-    let ini = document.getElementById('txti')
-    let fim = document.getElementById('txtf')
-    let passo = document.getElementById('txtp')
-    let res = document.getElementById('res')
-
-    if (ini.value.lenght == 0 || fim.value.lenght == 0 || passo.value.lenght == 0) {
-        window.alert('[ERRO]Faltam Dados!')
+function tabuada() {
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+    if (num.value.lenght == 0) {
+        window.alert('Por Favor, Digite um Número')
     } else {
-        res.innerHTML = 'Contando: '
-        let i = Number(ini.value)
-        let f = Number(fim.value)
-        let p = Number(passo.value)
-
-        for(let c = i; c <= f; c += p) {
-            res.innerHTML += ` ${c} \u{1F449} `
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = '' //pra limpar a tabuada após o uso
+        while (c <= 10) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c} `
+            tab.appendChild(item)
+            c++
         }
     }
 }
