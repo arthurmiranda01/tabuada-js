@@ -4,24 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Formulário HP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Qual seu personagem de Harry Potter ?</h1>
     </header>
     <section>
-        <div id="num">
-            <p>Número: <input type="number" name="num" id="txtn">
-            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
-        </div>
-        <div id='res'>
-            <select name="tabuada" id="seltab" size="10">
-                <option>Digite um Número acima!</option>
-            </select>
-        </div>
+        <form>
+            <label for="options">Que casa de Hogwarts você mais se identifica?</label>
+            <select id="options" name="options" class="container">
+              <option value="option0"></option>
+              <option value="option1">Grifinória</option>
+              <option value="option2">Lufa-Lufa</option>
+              <option value="option3">Corvinal</option>
+              <option value="option3">Sonserina</option>
+            </select></br>
+
+            <label for="options">Se visse alguém sendo assaltado o que faria?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Ajudava o ladrão</option>
+              <option value="option2">Saia correndo</option>
+              <option value="option3">Matava o ladrão</option>
+              <option value="option3">Ajudava a vítima</option>
+            </select></br>
+            
+            <label for="options">Qual matéria mais te atrai?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Poções</option>
+              <option value="option2">Defesa C/A/Trevas</option>
+              <option value="option3">Herbologia</option>
+              <option value="option3">Trato das criaturas mágicas</option>
+            </select></br>
+
+            <label for="options">Se pudesse aprender um feitço</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Avada Kedavra</option>
+              <option value="option2">Accio</option>
+              <option value="option3">Lumus</option>
+              <option value="option3">Lava louços</option>
+            </select></br>
+
+            <label for="options">O que te dá mais ódio?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Traição</option>
+              <option value="option2">Egoísmo</option>
+              <option value="option3">Falsidade</option>
+              <option value="option3">Covardia</option>
+            </select></br>
+
+            <label for="options">O que te dá mais prazer?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Coquinha gelada</option>
+              <option value="option2">Comer</option>
+              <option value="option3">Boa noite de sono</option>
+              <option value="option3">Matar os inimigos</option>
+            </select></br>
+
+            <label for="options">Qual sua maior ambição?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Não tenho</option>
+              <option value="option2">Ser inteligente</option>
+              <option value="option3">Matar os inimigos</option>
+              <option value="option3">Ser conhecido mundialmente</option>
+            </select></br>
+
+            <label for="options">Que nome você daria pra uma coruja?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Merlin</option>
+              <option value="option2">Floquinho</option>
+              <option value="option3">Asa noturna</option>
+              <option value="option3">Costelinha</option>
+            </select></br>
+
+            <label for="options">O que mais te dá medo?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Traição</option>
+              <option value="option2">Escuro</option>
+              <option value="option3">Insetos</option>
+              <option value="option3">Altitude</option>
+            </select></br>
+
+            <label for="options">Me daria uma beijoca?</label>
+            <select id="options" name="options" class="container">
+                <option value="option0"></option>
+              <option value="option1">Sim</option>
+              <option value="option2">Acho que sim</option>
+              <option value="option3">Provavelmente sim</option>
+              <option value="option3">Com certeza</option>
+            </select></br>
+
+            <label for="options">Assistir uma sériezinha com o que?</label>
+            <select id="options" name="options"  class="container">
+                <option value="option0"></option>
+              <option value="option1">Doce</option>
+              <option value="option2">Refri</option>
+              <option value="option3">O amor da minha vida</option>
+              <option value="option3">Cacauzinha</option>
+            </select></br>
+
+          </form>
+
+          <button onclick="mudarImagem()" onclick="ocultarBotao()" id="button">Resultado</button>
+
+          <div class="showimage">
+            <p>Você é...</p>
+            <img id="imagem" src="" alt="Aguardando...">
+          </div>
+
     </section>
+
     <footer>
         <p>&copy; Arthur Miranda</p>
     </footer>
